@@ -39,7 +39,7 @@ namespace certificacao_csharp_roteiro.antes
 
             var resultado2 = (x * y) / z;
             Console.WriteLine("x * y / z = {0}", resultado2);
-            Console.WriteLine($"O resultado é do tipo: {resultado2.GetType()}";
+            Console.WriteLine($"O resultado é do tipo: {resultado2.GetType()}");
         }
     }
 }
