@@ -40,12 +40,12 @@ namespace certificacao_csharp_roteiro.antes
             Console.WriteLine($"estoque: {estoque}");
             Console.WriteLine($"populacaoDoMundo: {populacaoDoMundo}");
 
-            nivelDeAzul = 0xFFFF; // = 65535 em decimal
-            passageirosVoo = 230000; // System.Int16
-            populacao = 15000000000; // System.Int32
-            ushort passageirosNavio = -15; // System.UInt16
-            uint estoque = -2300; // System.UInt32
-            long populacaoDoBrasil = 207_660_929.345;
+            //nivelDeAzul = 0xFFFF; // = 65535 em decimal
+            //passageirosVoo = 230000; // System.Int16
+            //populacao = 15000000000; // System.Int32
+            //ushort passageirosNavio = -15; // System.UInt16
+            //uint estoque = -2300; // System.UInt32
+            //long populacaoDoBrasil = 207_660_929.345;
         }
     }
 }
