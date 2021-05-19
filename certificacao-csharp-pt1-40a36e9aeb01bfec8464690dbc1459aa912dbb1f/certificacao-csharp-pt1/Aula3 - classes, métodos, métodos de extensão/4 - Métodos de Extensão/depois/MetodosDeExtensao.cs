@@ -19,6 +19,11 @@ namespace certificacao_csharp_roteiro
     {
         public string Documento { get; }
 
+        internal void ImprimirDocumentoHTML()
+        {
+            throw new NotImplementedException();
+        }
+
         public Impressora(string documento)
         {
             this.Documento = documento;
