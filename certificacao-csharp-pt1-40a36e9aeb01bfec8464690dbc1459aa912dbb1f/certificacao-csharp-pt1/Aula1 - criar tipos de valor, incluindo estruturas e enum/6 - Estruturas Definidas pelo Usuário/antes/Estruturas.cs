@@ -18,6 +18,19 @@ namespace certificacao_csharp_roteiro.antes
             Console.WriteLine($"Longitude1 = {Longitude1}");
             Console.WriteLine($"Latitude2 = {Latitude2}");
             Console.WriteLine($"Longitude2 = {Longitude2}");
+
+            PosicaoGPS posicao1;
+            posicao1.Latitude = 13.78;
+            posicao1.Longitude = 29.51;
+
+            Console.WriteLine(posicao1);
+
+        }
+        struct PosicaoGPS
+        {
+            public double Latitude;
+            public double Longitude;
         }
     }
+
 }
