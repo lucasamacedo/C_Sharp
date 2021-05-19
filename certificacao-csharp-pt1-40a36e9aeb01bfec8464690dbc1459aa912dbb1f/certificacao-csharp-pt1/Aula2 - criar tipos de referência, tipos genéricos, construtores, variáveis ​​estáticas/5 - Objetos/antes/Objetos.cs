@@ -6,10 +6,17 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro.antes
 {
-    class PontoFlutuante : IAulaItem
+    class Objetos : IAulaItem
     {
         public void Executar()
         {
+           int pontuacao = 10;
+           Console.WriteLine($"pontuacao: {pontuacao}");
         }
+    }
+
+    class Jogador
+    {
+        public int Pontuacao { get; set; } = 10;
     }
 }

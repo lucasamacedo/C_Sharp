@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace certificacao_csharp_roteiro.antes
 {
-    class PontoFlutuante : IAulaItem
+    class Strings : IAulaItem
     {
         public void Executar()
         {
+            string a = "bom dia";
+            string b = "b";
         }
     }
 }
