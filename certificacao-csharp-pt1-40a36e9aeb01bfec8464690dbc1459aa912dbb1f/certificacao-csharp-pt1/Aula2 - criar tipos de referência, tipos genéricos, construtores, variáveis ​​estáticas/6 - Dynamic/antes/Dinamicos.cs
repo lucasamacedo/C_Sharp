@@ -10,7 +10,15 @@ namespace certificacao_csharp_roteiro.antes
     {
         public void Executar()
         {
+            object objeto = 1;
+            //objeto += 3;
 
+            dynamic dinamico = 1;
+            dinamico += 3;
+            Console.WriteLine(dinamico);
+
+            //dinamico.teste(); // da erro, pois em tempo de compilação ele não sabe que tipo é,
+            //então não sabe se tem um método teste();
         }
     }
 }
