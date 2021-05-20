@@ -42,8 +42,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="antes\Program.cs" />
-    <Compile Include="depois\Program.cs" />
+    <Compile Include="antes\Program.cs" />
+    <None Include="depois\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
