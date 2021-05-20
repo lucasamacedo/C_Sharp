@@ -10,6 +10,16 @@ namespace certificacao_csharp_roteiro.antes
     {
         public void Executar()
         {
+            double divida = 1_234_567_890.123;
+            //long copia = divida;
+
+            double salario = 1_237.89;
+            long copiaSalario = (long)salario;
+            Console.WriteLine(copiaSalario);
+
+            Animal animal = new Gato();
+            Gato gato = (Gato)animal; // cast = conversão explícita
+            Console.WriteLine(gato.GetType());
         }
     }
 }
