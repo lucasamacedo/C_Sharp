@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Topico1
+namespace Topico1.antes
 {
     class Program
     {
