@@ -11,6 +11,7 @@ namespace certificacao_csharp_roteiro.antes
     {
         public void Executar()
         {
+            // Se tiver Excel na máquina, irá abrir uma planilha contendo 4 células com as informações de planilha.Cells
             Type excelType = Type.GetTypeFromProgID("Excel.Application"
                 , true);
             dynamic excel = Activator.CreateInstance(excelType);
