@@ -115,14 +115,14 @@ namespace Topico4
         }
     }
 
-    class ClienteFilha: Cliente
-    {
+    //class ClienteFilha: Cliente
+    //{
 
-    }
-    class ClienteNeta : ClienteFilha
-    {
+    //}
+    //class ClienteNeta : ClienteFilha
+    //{
 
-    }
+    //}
 
     abstract class Pessoa
     {
