@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Topico1.antes
+namespace Topico1.depois
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Funcionario funcionario = new Funcionario(1000);
+            Funcionario funcionario = new Funcionario(1200);
             //funcionario.salario = 1000;
             //Console.WriteLine(funcionario.salario);
 
