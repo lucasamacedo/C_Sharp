@@ -125,10 +125,16 @@ namespace _02.ByteBank
             //No modo BASIC, os três métodos devem ser chamados.
             //NO modo ADVANCED, somente os métodos AvaliarEmprestimo() e
             //      ProcessarEmprestimo() devem ser chamados.
-
+#if TRIAL
+            AvaliarEmprestimo();
+#elif BASIC
             AvaliarEmprestimo();
             ProcessarEmprestimo();
-            FinanciarEmprestimo();
+            FinanciarEmprestimo(); 
+#elif ADVANCED
+            AvaliarEmprestimo();
+            ProcessarEmprestimo();
+#endif
         }
 
         private void FinanciarEmprestimo()
