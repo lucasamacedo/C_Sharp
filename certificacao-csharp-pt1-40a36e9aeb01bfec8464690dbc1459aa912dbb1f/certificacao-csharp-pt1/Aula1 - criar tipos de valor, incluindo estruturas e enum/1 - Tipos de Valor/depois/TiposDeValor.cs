@@ -19,7 +19,7 @@ namespace certificacao_csharp_roteiro
             Console.WriteLine($"idade: {idade}");
             Console.WriteLine($"copiaIdade: {copiaIdade}");
 
-            idade = 23;
+            idade = 24;
 
             Console.WriteLine($"idade: {idade}");
             Console.WriteLine($"copiaIdade: {copiaIdade}");
