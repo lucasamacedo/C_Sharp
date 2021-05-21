@@ -86,14 +86,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DB\ByteBank.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="DB\ByteBank.sql" />
-    <Content Include="DB\ByteBank_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>ByteBank.mdf</DependentUpon>
-    </Content>
     <Content Include="DB\p_TARIFA_TRANSFERENCIA_i.sql" />
     <Content Include="DB\p_TRANSFERENCIA_BANCARIA_i.sql" />
   </ItemGroup>
