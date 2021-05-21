@@ -20,6 +20,9 @@ namespace _01.ByteBank
             emprestimo.CalcularJuros(6000, 3);
             emprestimo.CalcularJuros(8500, 6);
             emprestimo.CalcularJuros(11500, 4);
+
+            CaixaEletronico caixa = new CaixaEletronico();
+            caixa.Sacar(80);
         }
 
         private static void Emprestimo_OnPrazoMaximoEstourado(object source, EventArgs e)
