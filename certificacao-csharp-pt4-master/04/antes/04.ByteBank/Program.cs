@@ -20,6 +20,8 @@ namespace _04.ByteBank
 
             //MenuCaixaEletronico menu = new MenuCaixaEletronico();
             //menu.Executar();
+
+            IList<Conta> contasEspeciais = GetContasEspeciais();
         }
 
 
@@ -30,6 +32,30 @@ namespace _04.ByteBank
 
             //TAREFA: RETORNAR UMA LISTA COM 
             //TODAS AS CONTAS COM MAIS DE 5 MIL DE SALDO
+
+            //for (int i = 0; i < clientes.Count; i++)
+            //{
+            //    Cliente cliente = clientes[i];
+            //    for (int j = 0; j < cliente.Contas.Count; j++)
+            //    {
+            //        Conta conta = cliente.Contas[j];
+            //        if (conta.Saldo > 5000)
+            //        {
+            //            contasEspeciais.Add(conta);
+            //        }
+            //    }
+            //}
+
+            foreach (Cliente cliente in clientes)
+            {
+                foreach (Conta conta in cliente.Contas)
+                {
+                    if (conta.Saldo > 5000)
+                    {
+                        contasEspeciais.Add(conta);
+                    }
+                }
+            }
 
             return contasEspeciais;
         }
