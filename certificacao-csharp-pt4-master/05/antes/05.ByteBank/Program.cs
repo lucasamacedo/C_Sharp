@@ -24,7 +24,7 @@ namespace _05.ByteBank
 
             try
             {
-                transferencia.Efetuar(conta1, null, 50);
+                transferencia.Efetuar(conta1, conta2, 250);
             }
             catch (Exception ex)
             {
@@ -96,6 +96,10 @@ namespace _05.ByteBank
             if (valor <= 0)
             {
                 throw new ArgumentOutOfRangeException("valor");
+            }
+            if (valor > contaDebito.Saldo)
+            {
+                throw new SaldoInsuficienteException();
             }
             Logger.LogInfo("Entrando do método Efetuar.");
 
