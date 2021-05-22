@@ -16,14 +16,14 @@ namespace _05.ByteBank
             Console.WriteLine(conta2);
 
             ITransferenciaBancaria transferencia = new TransferenciaBancaria_BD();
-            transferencia.Efetuar(conta1, conta2, 30);
+            transferencia.Efetuar(conta1, conta2, 13);
 
             Console.WriteLine(conta1);
             Console.WriteLine(conta2);
 
             try
             {
-                transferencia.Efetuar(conta1, conta2, 250);
+                transferencia.Efetuar(conta1, conta2, 10);
             }
             catch (Exception ex)
             {

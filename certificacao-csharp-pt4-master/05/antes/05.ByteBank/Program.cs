@@ -15,8 +15,8 @@ namespace _05.ByteBank
             Console.WriteLine(conta1);
             Console.WriteLine(conta2);
 
-            ITransferenciaBancaria transferencia = new TransferenciaBancaria();
-            transferencia.Efetuar(conta1, conta2, 30);
+            ITransferenciaBancaria transferencia = new TransferenciaBancaria_BD();
+            transferencia.Efetuar(conta1, conta2, 1);
 
             Console.WriteLine("Após  transferencia:");
             Console.WriteLine(conta1);
@@ -24,7 +24,7 @@ namespace _05.ByteBank
 
             try
             {
-                transferencia.Efetuar(conta1, conta2, 250);
+                transferencia.Efetuar(conta1, conta2, 1);
             }
             catch (Exception ex)
             {
@@ -54,12 +54,6 @@ namespace _05.ByteBank
 
         public void Debitar(decimal valor)
         {
-            if (Saldo < valor)
-            {
-                //throw new ArgumentException("saldo insuficiente");
-                throw new SaldoInsuficienteException();
-            }
-
             Saldo -= valor;
         }
 
@@ -71,6 +65,11 @@ namespace _05.ByteBank
         public override string ToString()
         {
             return $"Conta Nº: {Id:0000}, Saldo: {Saldo:C}";
+        }
+
+        public void AtualizarSaldo(decimal novoSaldo)
+        {
+            Saldo = novoSaldo;
         }
     }
 
@@ -132,12 +131,47 @@ namespace _05.ByteBank
             SqlCommand comandoTaxa = GetTaxaTransferenciaCommand
                 (contaCredito.Id, TAXA_TRANSFERENCIA);
 
-            comandoTaxa.ExecuteNonQuery();
-            comandoTransferencia.ExecuteNonQuery();
-            transaction.Commit();
-            Logger.LogInfo("Transferência realizada com sucesso.");
+            try
+            {
+                //EXECUTA OS COMANDOS NO SERVIDOR DE BANCO DE DADOS
+                comandoTaxa.ExecuteNonQuery();
+                comandoTransferencia.ExecuteNonQuery();
+                transaction.Commit(); //A TRANSFERÊNCIA ACONTECE NESTA LINHA
+                AtualizarSaldo(contaDebito);
+                AtualizarSaldo(contaCredito);
+                Logger.LogInfo("Transferência realizada com sucesso.");
+            }
+            catch (SqlException ex) //EXCEÇÕES ESPECÍFICAS PRIMEIRO
+            {
+                transaction.Rollback(); //DESFAZ A TRANSAÇÃO
+                Logger.LogErro(ex.ToString());
+                throw;
+            }
+            catch (Exception ex) //EXCEÇÕES MAIS GENÉRICAS DEPOIS
+            {
+                Logger.LogErro(ex.ToString());
+                throw;
+            }
+            finally
+            {
+                //LIBERA OS RECURSOS
+                comandoTransferencia.Dispose();
+                comandoTaxa.Dispose();
+                transaction.Dispose();
+                connection.Dispose();
+            }
 
             Logger.LogInfo("Saindo do método Efetuar.");
+        }
+
+        private ContaCorrente AtualizarSaldo(ContaCorrente conta)
+        {
+            SqlCommand comandoSaldo = new SqlCommand("SELECT SALDO_DISPONIVEL FROM CONTA WHERE CONTA_ID = @CONTA_ID", connection);
+            comandoSaldo.Parameters.AddWithValue("@CONTA_ID", conta.Id);
+            object obj = comandoSaldo.ExecuteScalar();
+            decimal novoSaldo = (decimal)(double?)obj;
+            conta.AtualizarSaldo(novoSaldo);
+            return conta;
         }
 
         private SqlCommand GetTransferenciaCommand(int contaDebitoId, int contaCreditoId, decimal valorTransferencia)
