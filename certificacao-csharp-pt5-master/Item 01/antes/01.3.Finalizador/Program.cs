@@ -12,6 +12,8 @@ namespace _01._3.Finalizador_antes
                 Livro livro = new Livro();
             }
 
+            GC.Collect();
+
             Console.ReadKey();
         }
     }
@@ -28,7 +30,12 @@ namespace _01._3.Finalizador_antes
         {
             UltimoId++;
             Id = UltimoId;
-            Trace.WriteLine("Livro " + Id + " está sendo criado");
+            //Trace.WriteLine("Livro " + Id + " está sendo criado");
         }
     }
+
+    //~Livro()
+    //{
+    //    Trace.WriteLine("Livro " + Id + " está sendo finalizado");
+    //}
 }
