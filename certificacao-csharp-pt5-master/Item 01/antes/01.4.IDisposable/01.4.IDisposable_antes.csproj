@@ -56,6 +56,7 @@
     <Compile Include="FrmMensagem.Designer.cs">
       <DependentUpon>FrmMensagem.cs</DependentUpon>
     </Compile>
+    <Compile Include="LeitorDeArquivo.cs" />
     <Compile Include="MensageiroNotepad.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
