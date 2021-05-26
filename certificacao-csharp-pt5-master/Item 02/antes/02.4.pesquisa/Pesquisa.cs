@@ -68,8 +68,11 @@ namespace _02._4.pesquisa.antes
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            bool comecaCom = lblDocumento.Text.ToUpper()
-                                .StartsWith(textoBusca.ToUpper());
+            //bool comecaCom = lblDocumento.Text.ToUpper()
+            //                    .StartsWith(textoBusca.ToUpper());
+            //bool comecaCom = lblDocumento.Text
+            //                    .StartsWith(textoBusca, true, System.Globalization.CultureInfo.CurrentCulture);
+            bool comecaCom = lblDocumento.Text.StartsWith(textoBusca, StringComparison.InvariantCultureIgnoreCase);
 
             if (comecaCom)
             {
@@ -85,8 +88,9 @@ namespace _02._4.pesquisa.antes
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            var terminaCom = lblDocumento.Text.ToUpper()
-                                .EndsWith(textoBusca.ToUpper());
+            //var terminaCom = lblDocumento.Text.ToUpper()
+            //                    .EndsWith(textoBusca.ToUpper());
+            var terminaCom = lblDocumento.Text.EndsWith(textoBusca, StringComparison.InvariantCultureIgnoreCase);
 
             if (terminaCom)
             {
@@ -102,7 +106,7 @@ namespace _02._4.pesquisa.antes
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            //indiceDe = ???; //implementar busca
+            indiceDe = lblDocumento.Text.IndexOf(textoBusca); //implementar busca
 
             if (indiceDe == -1)
             {
@@ -138,7 +142,7 @@ namespace _02._4.pesquisa.antes
             //txtPesquisa.SelectionStart = ???
             //txtPesquisa.SelectionLength = ???
 
-            string trecho = ""; //implementar busca
+            string trecho = lblDocumento.Text.Substring(indiceInicial, comprimento);
 
             return "O trecho selecionado é: " + trecho;
         }
@@ -148,7 +152,8 @@ namespace _02._4.pesquisa.antes
             var antigoTexto = parametros[0];
             var novoTexto = parametros[1];
 
-            //txtPesquisa.Text = ??? implementar substituição
+            lblDocumento.Text = 
+                lblDocumento.Text.Replace(antigoTexto, novoTexto);
 
             return "Trecho substituído com sucesso.";
         }
