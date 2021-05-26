@@ -36,26 +36,26 @@ namespace _01._03
             using (var stringWriter = new StringWriter())
             {
                 xmlSerializer.Serialize(stringWriter, dados);
-                //Console.WriteLine(stringWriter);
+                Console.WriteLine(stringWriter);
             }
 
-            using (var fileStream = new FileStream("LojaFilmes.xml", FileMode.Create, FileAccess.Write))
+            using (var fileStream = new FileStream("MovieStore.xml", FileMode.Create, FileAccess.Write))
             {
                 xmlSerializer.Serialize(fileStream, dados);
             }
             Console.WriteLine("Serializacao concluida");
             //AQUI VEM O CÓDIGO DO SEGUNDO SISTEMA
 
-            var xmlSerializer2 = new XmlSerializer(typeof(LojaDeFilmes));
-            LojaDeFilmes lojaDeFilmes;
-            using (var fileStream = new FileStream("LojaFilmes.xml", FileMode.Open, FileAccess.Read))
+            var xmlSerializer2 = new XmlSerializer(typeof(MovieStore));
+            MovieStore movieStore;
+            using (var fileStream = new FileStream("MovieStore.xml", FileMode.Open, FileAccess.Read))
             {
-                lojaDeFilmes = (LojaDeFilmes)xmlSerializer2.Deserialize(fileStream);
+                movieStore = (MovieStore)xmlSerializer2.Deserialize(fileStream);
             }
 
-            foreach (var filme in lojaDeFilmes.Filmes)
+            foreach (var movie in movieStore.Movies)
             {
-                Console.WriteLine(filme.Titulo);
+                Console.WriteLine(movie.Title);
             }
 
             Console.ReadKey();
