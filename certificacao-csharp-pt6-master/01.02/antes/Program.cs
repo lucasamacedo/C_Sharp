@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Script.Serialization;
 
 namespace _01._02
 {
@@ -17,6 +19,17 @@ namespace _01._02
 
             //1) usando JavaScriptSerializer
             Console.WriteLine("1) usando JavaScriptSerializer");
+
+            var loja = ObterDados();
+            var javascriptSerializer = new JavaScriptSerializer();
+            var json = javascriptSerializer.Serialize(loja);
+
+            Console.WriteLine(json);
+
+            using (var streamWriter = new StreamWriter("Loja.json"))
+            {
+                streamWriter.Write(json);
+            }
 
             //2) usando Json.NET (NewtonSoft)
             //Console.WriteLine("2) usando Json.NET (NewtonSoft)");
