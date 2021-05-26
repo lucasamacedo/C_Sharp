@@ -1,4 +1,4 @@
-﻿namespace _02._4.pesquisa
+﻿namespace _02._4.pesquisa.antes
 {
     partial class frmPesquisa
     {
@@ -69,7 +69,7 @@
             this.pnlBotoes.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlBotoes.Location = new System.Drawing.Point(0, 0);
             this.pnlBotoes.Name = "pnlBotoes";
-            this.pnlBotoes.Size = new System.Drawing.Size(684, 185);
+            this.pnlBotoes.Size = new System.Drawing.Size(687, 185);
             this.pnlBotoes.TabIndex = 0;
             // 
             // btnExecutar
@@ -255,7 +255,7 @@
             this.lblDocumento.Font = new System.Drawing.Font("Consolas", 17.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDocumento.Location = new System.Drawing.Point(0, 185);
             this.lblDocumento.Name = "lblDocumento";
-            this.lblDocumento.Size = new System.Drawing.Size(684, 226);
+            this.lblDocumento.Size = new System.Drawing.Size(687, 237);
             this.lblDocumento.TabIndex = 2;
             this.lblDocumento.Text = resources.GetString("lblDocumento.Text");
             // 
@@ -263,13 +263,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(684, 411);
+            this.ClientSize = new System.Drawing.Size(687, 422);
             this.Controls.Add(this.lblDocumento);
             this.Controls.Add(this.pnlBotoes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(700, 450);
             this.Name = "frmPesquisa";
             this.Text = "Pesquisa de strings";
+            this.Load += new System.EventHandler(this.frmPesquisa_Load);
             this.pnlBotoes.ResumeLayout(false);
             this.pnlBotoes.PerformLayout();
             this.ResumeLayout(false);

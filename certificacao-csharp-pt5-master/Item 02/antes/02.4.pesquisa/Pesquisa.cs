@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace _02._4.pesquisa
+namespace _02._4.pesquisa.antes
 {
     internal class Pesquisa
     {
-        private readonly Label txtPesquisa;
+        //private readonly Label txtPesquisa;
+        private readonly Label lblDocumento;
         private readonly List<string> parametros;
         private int indiceDe;
 
-        public Pesquisa(Label txtPesquisa, List<string> parametros)
+        public Pesquisa(Label lblDocumento, List<string> parametros)
         {
-            this.txtPesquisa = txtPesquisa;
+            this.lblDocumento = lblDocumento;
             this.parametros = parametros;
         }
 
@@ -50,7 +51,8 @@ namespace _02._4.pesquisa
             //txtPesquisa: caixa de texto do Windows Forms
             var textoBusca = parametros.FirstOrDefault();
 
-            bool contem = false; //implementar busca
+            bool contem = lblDocumento.Text.ToUpper()
+                            .Contains(textoBusca.ToUpper()); 
 
             if (contem)
             {
@@ -66,7 +68,8 @@ namespace _02._4.pesquisa
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            bool comecaCom = false; //implementar busca
+            bool comecaCom = lblDocumento.Text.ToUpper()
+                                .StartsWith(textoBusca.ToUpper());
 
             if (comecaCom)
             {
@@ -82,7 +85,8 @@ namespace _02._4.pesquisa
         {
             var textoBusca = parametros.FirstOrDefault();
 
-            var terminaCom = false; //implementar busca
+            var terminaCom = lblDocumento.Text.ToUpper()
+                                .EndsWith(textoBusca.ToUpper());
 
             if (terminaCom)
             {

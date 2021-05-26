@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _02._4.pesquisa
+namespace _02._4.pesquisa.antes
 {
     public partial class frmPesquisa : Form
     {
@@ -73,6 +73,11 @@ namespace _02._4.pesquisa
                     item.Text = "";
                 }
             }
+        }
+
+        private void frmPesquisa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

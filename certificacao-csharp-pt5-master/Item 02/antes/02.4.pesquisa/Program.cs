@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _02._4.pesquisa
+namespace _02._4.pesquisa.antes
 {
     static class Program
     {
