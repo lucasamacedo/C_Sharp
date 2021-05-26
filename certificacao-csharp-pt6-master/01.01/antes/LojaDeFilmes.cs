@@ -3,12 +3,12 @@ using System.Xml.Serialization;
 
 namespace _01._01
 {
-    [XmlRoot("MovieStore")]
+    [XmlRoot("LojaDeFilmes")]
     public class LojaDeFilmes
     {
-        [XmlArray("Directors")]
+        [XmlArray("Diretores")]
         public List<Diretor> Diretores = new List<Diretor>();
-        [XmlArray("Movies")]
+        [XmlArray("Filmes")]
         public List<Filme> Filmes = new List<Filme>();
         public static void AdicionarFilme(Filme filme)
         {
@@ -16,23 +16,24 @@ namespace _01._01
         }
     }
 
-    [XmlType("Director")]
+    [XmlType("Diretor")]
     public class Diretor
     {
-        [XmlElement("Name")]
+        [XmlElement("Nome")]
         public string Nome { get; set; }
-        [XmlIgnore]
+        [XmlElement("NumeroDeFilmes")]
+        //[XmlIgnore]
         public int NumeroFilmes;
     }
 
-    [XmlType("Movie")]
+    [XmlType("Filme")]
     public class Filme
     {
-        [XmlElement("Director")]
+        [XmlElement("Diretor")]
         public Diretor Diretor { get; set; }
-        [XmlElement("Title")]
+        [XmlElement("Titulo")]
         public string Titulo { get; set; }
-        [XmlElement("Year")]
+        [XmlElement("Ano")]
         public string Ano { get; set; }
     }
 }

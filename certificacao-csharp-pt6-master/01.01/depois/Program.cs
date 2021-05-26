@@ -13,7 +13,7 @@ namespace _01._03
         ///<image url="$(ProjectDir)\img02.png"/>
         static void Main(string[] args)
         {
-
+            
             //INÍCIO DO CÓDIGO DO PRIMEIRO SISTEMA
             var dados = ObterDados();
             var xmlSerializer = new XmlSerializer(typeof(LojaDeFilmes));
@@ -40,8 +40,8 @@ namespace _01._03
             foreach (var movie in movieStore.Movies)
             {
                 Console.WriteLine(movie.Title);
-            }                
-
+            }
+            Console.WriteLine("ProgramDepois");
             Console.ReadKey();
 
         }

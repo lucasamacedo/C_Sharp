@@ -1,0 +1,171 @@
+<?xml version="1.0"?>
+<LojaDeFilmes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Diretores>
+    <Diretor>
+      <NumeroDeFilmes>5</NumeroDeFilmes>
+      <Nome>James Cameron</Nome>
+    </Diretor>
+    <Diretor>
+      <NumeroDeFilmes>3</NumeroDeFilmes>
+      <Nome>Francis Lawrence</Nome>
+    </Diretor>
+    <Diretor>
+      <NumeroDeFilmes>6</NumeroDeFilmes>
+      <Nome>Zack Snyder</Nome>
+    </Diretor>
+    <Diretor>
+      <NumeroDeFilmes>7</NumeroDeFilmes>
+      <Nome>Joss Whedon</Nome>
+    </Diretor>
+    <Diretor>
+      <NumeroDeFilmes>4</NumeroDeFilmes>
+      <Nome>Martin Scorsese</Nome>
+    </Diretor>
+    <Diretor>
+      <NumeroDeFilmes>8</NumeroDeFilmes>
+      <Nome>Christopher Nolan</Nome>
+    </Diretor>
+    <Diretor>
+      <NumeroDeFilmes>4</NumeroDeFilmes>
+      <Nome>Scott Derrickson</Nome>
+    </Diretor>
+    <Diretor>
+      <NumeroDeFilmes>3</NumeroDeFilmes>
+      <Nome>Gareth Edwards</Nome>
+    </Diretor>
+    <Diretor>
+      <NumeroDeFilmes>6</NumeroDeFilmes>
+      <Nome>Justin Kurzel</Nome>
+    </Diretor>
+  </Diretores>
+  <Filmes>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>5</NumeroDeFilmes>
+        <Nome>James Cameron</Nome>
+      </Diretor>
+      <Titulo>Avatar</Titulo>
+      <Ano>2009</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>3</NumeroDeFilmes>
+        <Nome>Francis Lawrence</Nome>
+      </Diretor>
+      <Titulo>I Am Legend</Titulo>
+      <Ano>2007</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>6</NumeroDeFilmes>
+        <Nome>Zack Snyder</Nome>
+      </Diretor>
+      <Titulo>300</Titulo>
+      <Ano>2006</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>7</NumeroDeFilmes>
+        <Nome>Joss Whedon</Nome>
+      </Diretor>
+      <Titulo>The Avengers</Titulo>
+      <Ano>2012</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>4</NumeroDeFilmes>
+        <Nome>Martin Scorsese</Nome>
+      </Diretor>
+      <Titulo>The Wolf of Wall Street</Titulo>
+      <Ano>2013</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>8</NumeroDeFilmes>
+        <Nome>Christopher Nolan</Nome>
+      </Diretor>
+      <Titulo>Interstellar</Titulo>
+      <Ano>2014</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>0</NumeroDeFilmes>
+        <Nome>N/A</Nome>
+      </Diretor>
+      <Titulo>Game of Thrones</Titulo>
+      <Ano>2011–</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>0</NumeroDeFilmes>
+        <Nome>N/A</Nome>
+      </Diretor>
+      <Titulo>Vikings</Titulo>
+      <Ano>2013–</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>0</NumeroDeFilmes>
+        <Nome>N/A</Nome>
+      </Diretor>
+      <Titulo>Gotham</Titulo>
+      <Ano>2014–</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>0</NumeroDeFilmes>
+        <Nome>N/A</Nome>
+      </Diretor>
+      <Titulo>Power</Titulo>
+      <Ano>2014–</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>0</NumeroDeFilmes>
+        <Nome>N/A</Nome>
+      </Diretor>
+      <Titulo>Narcos</Titulo>
+      <Ano>2015–</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>0</NumeroDeFilmes>
+        <Nome>N/A</Nome>
+      </Diretor>
+      <Titulo>Breaking Bad</Titulo>
+      <Ano>2008–2013</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>4</NumeroDeFilmes>
+        <Nome>Scott Derrickson</Nome>
+      </Diretor>
+      <Titulo>Doctor Strange</Titulo>
+      <Ano>2016</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>3</NumeroDeFilmes>
+        <Nome>Gareth Edwards</Nome>
+      </Diretor>
+      <Titulo>Rogue One: A Star Wars Story</Titulo>
+      <Ano>2016</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>6</NumeroDeFilmes>
+        <Nome>Justin Kurzel</Nome>
+      </Diretor>
+      <Titulo>Assassin's Creed</Titulo>
+      <Ano>2016</Ano>
+    </Filme>
+    <Filme>
+      <Diretor>
+        <NumeroDeFilmes>0</NumeroDeFilmes>
+        <Nome>N/A</Nome>
+      </Diretor>
+      <Titulo>Luke Cage</Titulo>
+      <Ano>2016–</Ano>
+    </Filme>
+  </Filmes>
+</LojaDeFilmes>

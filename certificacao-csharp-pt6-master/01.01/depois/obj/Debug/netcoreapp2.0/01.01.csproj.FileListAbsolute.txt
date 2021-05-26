@@ -9,3 +9,14 @@ C:\Users\marce\Documents\GitHub\certificacao-csharp-pt6-estudio\01.01\depois\obj
 C:\Users\marce\Documents\GitHub\certificacao-csharp-pt6-estudio\01.01\depois\obj\Debug\netcoreapp2.0\01.01.AssemblyInfo.cs
 C:\Users\marce\Documents\GitHub\certificacao-csharp-pt6-estudio\01.01\depois\obj\Debug\netcoreapp2.0\01.01.dll
 C:\Users\marce\Documents\GitHub\certificacao-csharp-pt6-estudio\01.01\depois\obj\Debug\netcoreapp2.0\01.01.pdb
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\bin\Debug\netcoreapp2.0\01.01.deps.json
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\bin\Debug\netcoreapp2.0\01.01.runtimeconfig.json
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\bin\Debug\netcoreapp2.0\01.01.runtimeconfig.dev.json
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\bin\Debug\netcoreapp2.0\01.01.dll
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\bin\Debug\netcoreapp2.0\01.01.pdb
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\obj\Debug\netcoreapp2.0\01.01.AssemblyInfoInputs.cache
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\obj\Debug\netcoreapp2.0\01.01.AssemblyInfo.cs
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\obj\Debug\netcoreapp2.0\01.01.csproj.CoreCompileInputs.cache
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\obj\Debug\netcoreapp2.0\01.01.dll
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\obj\Debug\netcoreapp2.0\01.01.pdb
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\01.01\depois\obj\Debug\netcoreapp2.0\01.01.genruntimeconfig.cache
