@@ -134,9 +134,12 @@ namespace _02._02
             Imprimir(ordemLancamento);
 
             ///TAREFA: exibir filmes da trilogia inicial (posições 4, 5 e 6)
+            var trilogiaInicial = new Filme[3];
+            ordemLancamento.CopyTo(3, trilogiaInicial, 0, 3);
+            Imprimir(trilogiaInicial);
         }
 
-        private static void Imprimir(List<Filme> lista)
+        private static void Imprimir(IEnumerable<Filme> lista)
         {
             //for (int i = 0; i < cronologia.Count; i++)
             //{
