@@ -117,12 +117,21 @@ namespace _02._02
             Imprimir(trilogiaOriginal);
 
             ///TAREFA: exibir primeiro filme da cronologia
+            Console.WriteLine("Primeiro filme da cronologia: " + cronologia[0]);
 
             ///TAREFA: exibir último filme da cronologia
+            Console.WriteLine("Último filme da cronologia: " + cronologia[cronologia.Count - 1]);
+            Console.WriteLine();
 
             ///TAREFA: exibir filmes em ordem alfabética
+            var ordemAlfabetica = new List<Filme>(filmesComAtores);
+            ordemAlfabetica.Sort();
+            Imprimir(ordemAlfabetica);
 
             ///TAREFA: exibir filmes em ordem de lançamento
+            var ordemLancamento = new List<Filme>(filmesComAtores);
+            ordemLancamento.Sort( (filme1, filme2) => filme1.Ano.CompareTo(filme2.Ano) );
+            Imprimir(ordemLancamento);
 
             ///TAREFA: exibir filmes da trilogia inicial (posições 4, 5 e 6)
         }
@@ -142,7 +151,7 @@ namespace _02._02
         }
     }
 
-    public class Filme
+    public class Filme : IComparable
     {
         public Filme(string titulo, int ano)
         {
@@ -152,6 +161,19 @@ namespace _02._02
 
         public string Titulo { get; set; }
         public int Ano { get; set; }
+
+        public int CompareTo(object obj)
+        {
+            Filme esta = this;
+            Filme outra = obj as Filme; // Se usasse (Filme) obj, quando obj == null, lança uma exceção. Agora, nesse caso, outra recebe nulo.
+
+            if (outra == null)
+            {
+                return 1;
+            }
+
+            return esta.Titulo.CompareTo(outra.Titulo);
+        }
 
         public override string ToString()
         {
