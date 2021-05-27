@@ -60,13 +60,35 @@ namespace _02._01
             // Redimensionando um array (deixando a última posição vazia)
             Array.Resize(ref empresas, 3);
             Imprimir(empresas);
+
+            empresas[empresas.Length - 1] = "Casa do Código";
+
+            Array.Sort(empresas);
+            Imprimir(empresas);
+
+            string[] copia = new string[2];
+            Array.Copy(empresas, 1, copia, 0, 2);
+
+            Imprimir(copia);
+
+            string[] clone = empresas.Clone() as string[];
+            Imprimir(clone);
+
+            Array.Clear(clone, 1, clone.Length - 1);
+            Imprimir(clone);
         }
 
         private static void Imprimir(string[] empresas)
         {
-            for (int i = 0; i < empresas.Length; i++)
+            //for (int i = 0; i < empresas.Length; i++)
+            //{
+            //    string empresa = empresas[i];
+            //    Console.WriteLine(empresa);
+            //}
+            // Como a classe Array implementa a interface ICollection que implementa a interface IEnumerable, podemos fazer:
+            foreach (var empresa in empresas)
             {
-                Console.WriteLine(empresas[i]);
+                Console.WriteLine(empresa);
             }
         }
     }
