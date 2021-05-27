@@ -39,6 +39,27 @@ namespace _02._01
 
             Console.WriteLine("Primeiro elemento: " + empresas[0]);
             Console.WriteLine("Último elemento: " + empresas[empresas.Length - 1]);
+
+            Console.WriteLine("O índice de 'Casa do Código' é: " + Array.IndexOf(empresas, "Casa do Código"));
+            Console.WriteLine("O último índice de 'Casa do Código' é: " + Array.LastIndexOf(empresas, "Casa do Código"));
+
+            // Revertendo a sequência do array
+
+            Array.Reverse(empresas);
+            Imprimir(empresas);
+
+            // Revertendo NOVAMENTE a sequência do array
+
+            Array.Reverse(empresas);
+            Imprimir(empresas);
+
+            // Redimensionando um array (Truncando a última posição)
+            Array.Resize(ref empresas, 2);
+            Imprimir(empresas);
+
+            // Redimensionando um array (deixando a última posição vazia)
+            Array.Resize(ref empresas, 3);
+            Imprimir(empresas);
         }
 
         private static void Imprimir(string[] empresas)
