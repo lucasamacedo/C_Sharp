@@ -10,9 +10,9 @@ namespace _02._01
             string caelum = "Caelum";
             string casaDoCodigo = "Casa do Código";
 
-            Console.WriteLine(alura);
-            Console.WriteLine(caelum);
-            Console.WriteLine(casaDoCodigo);
+            //Console.WriteLine(alura);
+            //Console.WriteLine(caelum);
+            //Console.WriteLine(casaDoCodigo);
 
             // MATRIZ = ARRAY
 
@@ -26,6 +26,27 @@ namespace _02._01
             //    alura, caelum, casaDoCodigo
             //};
             string[] empresas = { alura, caelum, casaDoCodigo };
+
+            Imprimir(empresas);
+
+            caelum = "Caelum Ensino e Inovação";
+
+            Imprimir(empresas);
+
+            empresas[1] = "Caelum Ensino e Inovação";
+
+            Imprimir(empresas);
+
+            Console.WriteLine("Primeiro elemento: " + empresas[0]);
+            Console.WriteLine("Último elemento: " + empresas[empresas.Length - 1]);
+        }
+
+        private static void Imprimir(string[] empresas)
+        {
+            for (int i = 0; i < empresas.Length; i++)
+            {
+                Console.WriteLine(empresas[i]);
+            }
         }
     }
 }
