@@ -19,3 +19,4 @@ D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\antes\obj\Debug\netco
 D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\antes\obj\Debug\netcoreapp2.0\02.05 antes.dll
 D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\antes\obj\Debug\netcoreapp2.0\02.05 antes.pdb
 D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\antes\obj\Debug\netcoreapp2.0\02.05 antes.genruntimeconfig.cache
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\antes\obj\Debug\netcoreapp2.0\02.05 antes.csprojAssemblyReference.cache
