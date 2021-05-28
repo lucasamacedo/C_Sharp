@@ -15,8 +15,14 @@ namespace _02._03
             //SETS = CONJUNTOS
 
             //declarando set de filmes
+            ISet<Filme> filmes = new HashSet<Filme>();
 
             //adicionando: esperanca, imperio, retorno
+            filmes.Add(esperanca);
+            filmes.Add(imperio);
+            filmes.Add(retorno);
+
+            Imprimir(filmes);
 
             //Características do Set (conjunto)
             //1. não permite duplicidade
@@ -31,16 +37,23 @@ namespace _02._03
             //desvantagem: consumo de memória
 
             //É possível ordenar um conjunto?
+            //filmes.Sort(); // nao existe
 
             //copiando para uma lista
+            List<Filme> listaFilmes = new List<Filme>(filmes);
 
             //ordenando copia
+            listaFilmes.Sort();
 
             //imprimindo copia
+            Imprimir(listaFilmes);
 
             //verificando se objeto existe
+            Console.WriteLine("O filme Uma nova Esperança existe? " + filmes.Contains(esperanca));
 
             //verificando se objeto com mesmos dados existe
+            var novaEsperanca = new Filme("Episódio IV -Uma nova esperança", 1977);
+            Console.WriteLine("O filme Uma nova Esperança existe? " + filmes.Contains(novaEsperanca));
         }
 
         private static void Imprimir(IEnumerable<Filme> filmes)
@@ -80,6 +93,26 @@ namespace _02._03
         public override string ToString()
         {
             return $"{Titulo} - {Ano}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            Filme outra = obj as Filme;
+            if (outra == null)
+            {
+                return false;
+            }
+
+            return outra.Titulo.Equals(this.Titulo)
+                    && outra.Ano.Equals(this.Ano);
+        }
+
+        public override int GetHashCode()
+        {
+            int hashCode = -131496797;
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Titulo);
+            hashCode = hashCode * -1521134295 + Ano.GetHashCode();
+            return hashCode;
         }
     }
 }
