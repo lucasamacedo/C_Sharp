@@ -1,0 +1,12 @@
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\bin\Debug\netcoreapp3.1\Exercicio2HashSet.exe
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\bin\Debug\netcoreapp3.1\Exercicio2HashSet.deps.json
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\bin\Debug\netcoreapp3.1\Exercicio2HashSet.runtimeconfig.json
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\bin\Debug\netcoreapp3.1\Exercicio2HashSet.runtimeconfig.dev.json
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\bin\Debug\netcoreapp3.1\Exercicio2HashSet.dll
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\bin\Debug\netcoreapp3.1\Exercicio2HashSet.pdb
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\obj\Debug\netcoreapp3.1\Exercicio2HashSet.AssemblyInfoInputs.cache
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\obj\Debug\netcoreapp3.1\Exercicio2HashSet.AssemblyInfo.cs
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\obj\Debug\netcoreapp3.1\Exercicio2HashSet.csproj.CoreCompileInputs.cache
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\obj\Debug\netcoreapp3.1\Exercicio2HashSet.dll
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\obj\Debug\netcoreapp3.1\Exercicio2HashSet.pdb
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\Exercicio2HashSet\obj\Debug\netcoreapp3.1\Exercicio2HashSet.genruntimeconfig.cache

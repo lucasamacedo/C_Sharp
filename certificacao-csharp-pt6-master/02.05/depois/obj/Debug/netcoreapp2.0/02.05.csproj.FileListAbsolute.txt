@@ -8,3 +8,14 @@ C:\Users\marce\Documents\GitHub\certificacao-csharp-pt6-estudio\02.05\depois\obj
 C:\Users\marce\Documents\GitHub\certificacao-csharp-pt6-estudio\02.05\depois\obj\Debug\netcoreapp2.0\02.05.AssemblyInfo.cs
 C:\Users\marce\Documents\GitHub\certificacao-csharp-pt6-estudio\02.05\depois\obj\Debug\netcoreapp2.0\02.05.dll
 C:\Users\marce\Documents\GitHub\certificacao-csharp-pt6-estudio\02.05\depois\obj\Debug\netcoreapp2.0\02.05.pdb
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\bin\Debug\netcoreapp2.0\02.05.deps.json
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\bin\Debug\netcoreapp2.0\02.05.runtimeconfig.json
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\bin\Debug\netcoreapp2.0\02.05.runtimeconfig.dev.json
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\bin\Debug\netcoreapp2.0\02.05.dll
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\bin\Debug\netcoreapp2.0\02.05.pdb
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\obj\Debug\netcoreapp2.0\02.05.AssemblyInfoInputs.cache
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\obj\Debug\netcoreapp2.0\02.05.AssemblyInfo.cs
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\obj\Debug\netcoreapp2.0\02.05.csproj.CoreCompileInputs.cache
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\obj\Debug\netcoreapp2.0\02.05.dll
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\obj\Debug\netcoreapp2.0\02.05.pdb
+D:\Github Projetos\C#\certificacao-csharp-pt6-master\02.05\depois\obj\Debug\netcoreapp2.0\02.05.genruntimeconfig.cache
