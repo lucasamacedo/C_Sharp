@@ -19,6 +19,13 @@ namespace _01_02
                 Console.WriteLine("A campainha será tocada.");
                 campainha.Tocar("202");
             }
+            catch(AggregateException e)
+            {
+                foreach (var exc in e.InnerExceptions)
+                {
+                    Console.WriteLine(exc.Message);
+                }
+            }
             catch(Exception e)
             {
                 Console.WriteLine(e.Message);
@@ -45,6 +52,8 @@ namespace _01_02
 
         public void Tocar(string apartamento)
         {
+            List<Exception> erros = new List<Exception>();
+
             foreach (var manipulador in OnCampainhaTocou.GetInvocationList())
             {
                 try
@@ -53,9 +62,11 @@ namespace _01_02
                 }
                 catch (Exception e)
                 {
-
+                    erros.Add(e.InnerException);
                 }
-            } 
+            }
+
+            throw new AggregateException(erros);
         }
     }
 
