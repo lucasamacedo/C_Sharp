@@ -16,15 +16,17 @@ namespace _01_02
             Console.WriteLine("A campainha será tocada.");
             campainha.Tocar();
 
+            
+
             Console.ReadKey();
 
         }
 
-        static void CampainhaTocou1()
+        static void CampainhaTocou1(object sender, EventArgs args)
         {
             Console.WriteLine("A campainha tocou.(1)");
         }
-        static void CampainhaTocou2()
+        static void CampainhaTocou2(object sender, EventArgs args)
         {
             Console.WriteLine("A campainha tocou.(2)");
         }
@@ -32,13 +34,13 @@ namespace _01_02
 
     class Campainha
     {
-        public Action OnCampainhaTocou { get; set; }
+        public event EventHandler OnCampainhaTocou;
 
         public void Tocar()
         {
             if (OnCampainhaTocou != null)
             {
-                OnCampainhaTocou();
+                OnCampainhaTocou(this, new EventArgs());
             }
 
         }
