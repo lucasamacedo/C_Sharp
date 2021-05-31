@@ -94,6 +94,29 @@ namespace _02_01
             }
             Console.WriteLine();
 
+            // SELECT d.Nome AS Diretor, COUNT(*) AS Quantidade
+            // FROM filmes AS f
+            // JOIN diretores as d
+            //  ON d.Id = f.DiretorId
+            // GROUP BY d.Id
+
+            var consulta5 =
+                from f in filmes
+                join d in diretores
+                    on f.DiretorId equals d.Id
+                group d by d
+                    into agrupado
+                select new
+                {
+                    Diretor = agrupado.Key,
+                    Quantidade = agrupado.Count()
+                };
+
+            foreach (var item in consulta5)
+            {
+                Console.WriteLine($"{item.Diretor.Nome, -20}\t{item.Quantidade}");
+            }
+
         }
 
         private static void Imprimir(IEnumerable<Filme> filmes)
