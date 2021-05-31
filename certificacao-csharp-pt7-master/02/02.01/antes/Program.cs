@@ -10,6 +10,7 @@ namespace _02_01
         static void Main(string[] args)
         {
             var filmes = GetFilmes();
+            var diretores = GetDiretores();
 
             var novoFilme = new Filme
             {
@@ -63,6 +64,31 @@ namespace _02_01
             Console.WriteLine($"{"Titulo",-40} {"Diretor",-20}");
             Console.WriteLine(new string('=', 66));
             foreach (var filme in consulta3)
+            {
+                Console.WriteLine($"{filme.Titulo,-40} {filme.Diretor,-20}");
+            }
+            Console.WriteLine();
+
+            // SELECT f.Nome AS Titulo, d.Nome AS Diretor
+            // FROM filmes AS f
+            // JOIN diretores as d
+            //  ON d.Id = f.DiretorId
+            // WHERE d.Nome = "Tim Burton"
+
+            var consulta4 =
+                from f in filmes
+                join d in diretores
+                    on f.DiretorId equals d.Id
+                where f.Diretor.Nome == "Tim Burton"
+                select new
+                {
+                    f.Titulo,
+                    Diretor = d.Nome
+                };
+
+            Console.WriteLine($"{"Titulo",-40} {"Diretor",-20}");
+            Console.WriteLine(new string('=', 66));
+            foreach (var filme in consulta4)
             {
                 Console.WriteLine($"{filme.Titulo,-40} {filme.Diretor,-20}");
             }
