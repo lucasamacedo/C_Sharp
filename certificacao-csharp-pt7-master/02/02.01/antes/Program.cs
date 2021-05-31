@@ -23,9 +23,21 @@ namespace _02_01
             
             Imprimir(filmes);
 
+            // LINQ = CONSULTA INTEGRADA À LINGUAGEM
+
+            // SELECT f.*
+            // FROM filmes AS f
+            // WHERE f.Diretor = "Tim Burton"
+
+            var consulta =
+                from f in filmes
+                select f;
+
+            Imprimir(consulta);
+
         }
 
-        private static void Imprimir(List<Filme> filmes)
+        private static void Imprimir(IEnumerable<Filme> filmes)
         {
             Console.WriteLine($"{"Titulo",-40} {"Diretor",-20} {"Ano",4}");
             Console.WriteLine(new string('=', 66));
@@ -33,6 +45,7 @@ namespace _02_01
             {
                 Console.WriteLine($"{filme.Titulo,-40} {filme.Diretor.Nome,-20} {filme.Ano,4}");
             }
+            Console.WriteLine();
         }
 
         private static List<Diretor> GetDiretores()
