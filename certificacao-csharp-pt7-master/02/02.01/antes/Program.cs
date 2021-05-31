@@ -136,6 +136,24 @@ namespace _02_01
                     $"\t{item.Media}");
             }
 
+            int tamanhoPagina = 4;
+            int pagina = 0;
+
+            while (pagina * tamanhoPagina < filmes.Count())
+            {
+                Console.WriteLine();
+                Console.WriteLine("Página: " + (pagina + 1));
+                Console.WriteLine();
+
+                var relatorio =
+                    from f in filmes
+                                .Skip(tamanhoPagina * pagina)
+                                .Take(tamanhoPagina)
+                    select f;
+
+                Imprimir(relatorio);
+                pagina++;
+            }
         }
 
         private static void Imprimir(IEnumerable<Filme> filmes)
