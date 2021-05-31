@@ -34,6 +34,8 @@ namespace _02_01
                 where f.Diretor.Nome == "Tim Burton"
                 select f;
 
+            Imprimir(consulta);
+
             // SELECT f.Nome AS Titulo, f.Diretor
             // FROM filmes AS f
             // WHERE f.Diretor = "Tim Burton"
@@ -47,8 +49,24 @@ namespace _02_01
                     Diretor = f.Diretor.Nome 
                 };
 
-            Imprimir(consulta);
             Imprimir(consulta2);
+
+            var consulta3 =
+                from f in filmes
+                where f.Diretor.Nome == "Tim Burton"
+                select new 
+                {
+                    f.Titulo,
+                    Diretor = f.Diretor.Nome
+                };
+
+            Console.WriteLine($"{"Titulo",-40} {"Diretor",-20}");
+            Console.WriteLine(new string('=', 66));
+            foreach (var filme in consulta3)
+            {
+                Console.WriteLine($"{filme.Titulo,-40} {filme.Diretor,-20}");
+            }
+            Console.WriteLine();
 
         }
 
